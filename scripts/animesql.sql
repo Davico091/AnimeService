@@ -1,5 +1,6 @@
 create database animedb;
-create table anime{
-animeId int not null primary key auto_increment,
-nombre varchar(100)
-};
+use animedb;
+create table anime(
+anime_id int not null primary key auto_increment,
+name varchar(100)
+);

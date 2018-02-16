@@ -1,7 +1,8 @@
 package com.anime.persist.controller;
 
 import java.util.List;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,20 +15,26 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.anime.persist.model.Anime;
 import com.anime.persist.repository.AnimeRepository;
+import com.google.gson.Gson;
 
 @RestController
 public class AnimeController {
-
+	
 	@Autowired
 	AnimeRepository animeRepository;
+	
+    private static final Logger LOGGER = LogManager.getLogger(AnimeController.class);
+    private Gson gson= new Gson();
 	
 	@GetMapping("/animes")
 	public List<Anime> getAllNotes() {
 	    return animeRepository.findAll();
 	}
 	
-	@PostMapping("/notes")
+	@PostMapping("/animes")
 	public Anime createAnime(@RequestBody Anime anime) {
+		LOGGER.info("error**************");
+		LOGGER.info(anime.toString());
 		return animeRepository.save(anime);
 	}
 	

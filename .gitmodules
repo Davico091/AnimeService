@@ -1,3 +1,8 @@
 [submodule "anime-app"]
 	path = anime-app
 	url = https://github.com/Davico091/anime-app.git
+[submodule "angularApps/heroes-app"]
+	url = https://github.com/Davico091/heroes-app.git
+[submodule "heroes-app"]
+	path = heroes-app
+	url = https://github.com/Davico091/heroes-app.git

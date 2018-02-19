@@ -1,0 +1,3 @@
+[submodule "anime-app"]
+	path = anime-app
+	url = https://github.com/Davico091/anime-app.git

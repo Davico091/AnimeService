@@ -1,7 +1,9 @@
 # AnimeService
-Proyecto que expone el servicio rest
+this project contains  :
+-project that expose rest service
+-project that show client app
 
-In this repo :
+Frameworks or technologies :
 
 Springboot
 swagger

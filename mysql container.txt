@@ -1,0 +1,23 @@
+Para crear un contenedor con mysql y usar ese contenedor para base de datos 
+En mi caso instale ubuntu en una maquina virtual(virtual box).
+- Primero instalar docker
+- Una vez instalado docker bajar la imagen de mysql en mi caso ejecute el comando :
+    docker pull mysql (la descarga de dockerhub)
+- Al tener la imagen creamos el contenedor exponiendo la ip que tengamos asignada y puerto de mysql
+    docker run -p [ip]:[mysqlPort]:[portToExpose] --name [nameOfContainger] -e MYSQL_ROOT_PASSWORD=[rootPassword] -d mysql  
+
+para probar que todo se hizo correctamente podemos ejecutar el comando : 
+
+docker logs [containerID] -> se mostrara el log de la instancia levantada de mysql
+
+luego si quisieramos desde un cliente externo nos conectamos a mysql y creamos una
+base de datos y para confirmar los cambios ingresamos al contenedor, una vez dentro
+entramos al cliente mysql y confirmamos la creacion 
+
+docker exec -it [containerID]
+mysql -u root -p 
+luego ingresar el password root y con comandos sql verificar los cambios
+
+    
+
+        

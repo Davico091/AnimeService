@@ -35,6 +35,11 @@ public class HeroController {
 	    return heroRepository.findAll();
 	}
 	
+	@GetMapping("/heroes/name/{name}")
+	public List<Hero> getAllNotesByName(@PathVariable String name) {
+	    return heroRepository.findByName(name);
+	}
+	
 	@PostMapping("/heroes")
 	public Hero createHero(@RequestBody Hero hero) {
 		LOGGER.info("error**************");

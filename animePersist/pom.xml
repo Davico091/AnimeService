@@ -73,9 +73,9 @@
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.netflix.eureka/eureka-client -->
 		<dependency>
-        <groupId>org.springframework.cloud</groupId>
-        <artifactId>spring-cloud-starter-eureka</artifactId>
-    </dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
 
 	</dependencies>
 
